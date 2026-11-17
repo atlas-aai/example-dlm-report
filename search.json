@@ -1,0 +1,223 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Report Title",
+    "section": "",
+    "text": "About This Report\nThis is a report template for the Dynamic Learning Maps® (DLM®) Alternate Assessment System. This is where we can provide a brief overview or purpose of the manual. If this is a technical report, this is where we would include the executive summary.",
+    "crumbs": [
+      "About This Report"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "Report Title",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nHere we can include any acknowledgements (e.g., staff, advisory committees).",
+    "crumbs": [
+      "About This Report"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html",
+    "href": "chapters/01-text-features.html",
+    "title": "1  Text Features",
+    "section": "",
+    "text": "1.1 Conditional text\nThere are several ways to include text optionally. First, we can use in-line helpers such as dlm_is_pdf() or dlm_is_html(), which can be used to determine the type of output. For example, this is the website version of this report.\nWe can also include or exclude entire paragraphs using the the .content-visible class with a div.\nRead this report chapter by chapter in the browser, or download the complete PDF from the button above.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html#sec-callouts",
+    "href": "chapters/01-text-features.html#sec-callouts",
+    "title": "1  Text Features",
+    "section": "1.2 Callouts",
+    "text": "1.2 Callouts\nCallouts can be used to draw attention to some text. Create a callout with:\n::: {.callout-note}\n## Callout title\n\nHere is the callout text.\n:::\n\n\n\n\n\n\nNoteNote callout\n\n\n\nCreate a note callout using the .callout-note class.\n\n\n\n\n\n\n\n\nTipTip callout\n\n\n\nCreate a tip callout using the .callout-tip class.\n\n\n\n\n\n\n\n\nImportantImportant callout\n\n\n\nCreate an important callout using the .callout-important class.\n\n\n\n\n\n\n\n\nWarningWarning callout\n\n\n\nCreate a warning callout using the .callout-warning class.\n\n\n\n\n\n\n\n\nCautionCaution callout\n\n\n\nCreate a caution callout using the .callout-caution class.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html#code",
+    "href": "chapters/01-text-features.html#code",
+    "title": "1  Text Features",
+    "section": "1.3 Code",
+    "text": "1.3 Code\nInline code renders as you would expect (e.g., function_name()). We can also include code chunks.\n\nlibrary(tidyverse)\n\npenguins |&gt;\n  as_tibble() |&gt;\n  filter(species == \"Adelie\")\n## # A tibble: 152 × 8\n##    species island    bill_len bill_dep flipper_len body_mass sex     year\n##    &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt;  &lt;int&gt;\n##  1 Adelie  Torgersen     39.1     18.7         181      3750 male    2007\n##  2 Adelie  Torgersen     39.5     17.4         186      3800 female  2007\n##  3 Adelie  Torgersen     40.3     18           195      3250 female  2007\n##  4 Adelie  Torgersen     NA       NA            NA        NA &lt;NA&gt;    2007\n##  5 Adelie  Torgersen     36.7     19.3         193      3450 female  2007\n##  6 Adelie  Torgersen     39.3     20.6         190      3650 male    2007\n##  7 Adelie  Torgersen     38.9     17.8         181      3625 female  2007\n##  8 Adelie  Torgersen     39.2     19.6         195      4675 male    2007\n##  9 Adelie  Torgersen     34.1     18.1         193      3475 &lt;NA&gt;    2007\n## 10 Adelie  Torgersen     42       20.2         190      4250 &lt;NA&gt;    2007\n## # ℹ 142 more rows",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html#headings",
+    "href": "chapters/01-text-features.html#headings",
+    "title": "1  Text Features",
+    "section": "1.4 Headings",
+    "text": "1.4 Headings\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.\nEtiam finibus ultrices lacinia. Integer feugiat purus porta, venenatis sapien sit amet, eleifend erat. Sed sit amet tincidunt justo, id pellentesque orci. Donec dignissim egestas velit, et molestie orci sagittis eget. Maecenas a placerat quam, eu pharetra orci. Suspendisse congue, orci sed vestibulum fringilla, augue libero feugiat nulla, in accumsan est eros sollicitudin augue. Phasellus sit amet metus sit amet ex blandit iaculis sit amet sed ex. Curabitur tellus tortor, blandit quis ante eget, finibus iaculis urna. Proin sed tincidunt turpis, id dignissim tortor. Quisque ac lacus pellentesque, imperdiet mauris eu, tincidunt est. Mauris facilisis, quam condimentum pharetra porta, diam orci sagittis orci, nec egestas tortor orci et magna. Nam et risus in tellus pulvinar sodales. Sed ligula tellus, consectetur in elit et, blandit condimentum urna. Donec gravida magna a arcu vehicula bibendum. Duis congue neque id eros pulvinar placerat.\n\n1.4.1 Heading 3\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.\n\n1.4.1.1 Heading 4\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.\n\n\n1.4.1.2 Heading 4\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.\n\n\n\n1.4.2 Heading 3\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html#cross-references",
+    "href": "chapters/01-text-features.html#cross-references",
+    "title": "1  Text Features",
+    "section": "1.5 Cross references",
+    "text": "1.5 Cross references\nWe can cross reference sections. For example, callouts are described in Section 1.2. Or we can reference subheadings such as Section 1.4.1. Or we can reference another chapter. Figures are described in Chapter 2.\nWe can also reference tables and figures like Table 1.1 and Figure 1.1.\n\n\n\n\nTable 1.1: An example table caption.\n\n\n\n\n\n\n\n\n\nstate\nn\n\n\n\n\nPennsylvania\n26,671 \n\n\nMaryland\n27,830 \n\n\nIdaho\n58,869 \n\n\nTexas\n71,403 \n\n\nAlabama\n91,567 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1.1: An example figure caption",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html#citations",
+    "href": "chapters/01-text-features.html#citations",
+    "title": "1  Text Features",
+    "section": "1.6 Citations",
+    "text": "1.6 Citations\nWe can include a normal reference (Thompson, 2026). Or we can include in text, such as with Clark (2016). We can also include an abbreviation, like for the loglinear cognitive diagnostic model (LCDM; Henson et al., 2009).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-text-features.html#equations",
+    "href": "chapters/01-text-features.html#equations",
+    "title": "1  Text Features",
+    "section": "1.7 Equations",
+    "text": "1.7 Equations\nEquations can also be rendered, numbered, and references as shown in Equation 1.1.\n\\[\nP(X_j = x_j) = \\sum_{c=1}^C\\nu_c \\prod_{i=1}^I\\pi_{ic}^{x_{ij}}(1-\\pi_{ic})^{1 - x_{ij}}\n\\tag{1.1}\\]\nWe can also render math inline. For example, the intercept of Equation 1.2, \\(\\lambda_{i,0}\\), determines the probability of a correct response for a nonmaster, and the main effect \\(\\lambda_{i,1}\\) is the increase in log-odds associated with mastery.\n\\[\n\\pi_{ic} = P(X_{ic} = 1|\\alpha_c) = \\frac{\\exp(\\lambda_{i,0} + \\lambda_{i,1}\\alpha_c)}{1 + \\exp(\\lambda_{i,0} + \\lambda_{i,1}\\alpha_c)}\n\\tag{1.2}\\]\n\n\n\n\nClark, A. K. (2016). Item writing and review practices for alternate assessments.\n\n\nHenson, R. A., Templin, J. L., & Willse, J. T. (2009). Defining a family of cognitive diagnosis models using log-linear models with latent variables. Psychometrika, 74(2), 191–210. https://doi.org/10.1007/s11336-008-9089-5\n\n\nThompson, W. J. (2026). Measr: Bayesian psychometric measurement using stan. https://measr.info",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Text Features</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-figures.html",
+    "href": "chapters/02-figures.html",
+    "title": "2  Figures",
+    "section": "",
+    "text": "2.1 Standard figures\nThis chapter focuses on figures. The Typst output format enforces A-2a and UA-1 standards, meaning that all figures are required to have alternative text specified via the fig-alt chunk option. If there are any figures without alternative text specified, the render will fail.\nFigure 2.1 is a standard figure with the default figure size and aspect ratio.\nFigure 2.1: A standard figure with default formatting and sizing\nWe can also add facets and change the aspect ratio, as shown in Figure 2.2.\nFigure 2.2: A faceted plot with a vertical aspect ratio",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Figures</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-figures.html#adding-symbols-to-plots",
+    "href": "chapters/02-figures.html#adding-symbols-to-plots",
+    "title": "2  Figures",
+    "section": "2.2 Adding symbols to plots",
+    "text": "2.2 Adding symbols to plots\nFigure 2.3 shows an example of including markdown formatting and other symbols (e.g., greek letters) in a plot.\n\n\n\n\n\n\n\n\nFigure 2.3: Adding symbols and markdown to figures",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Figures</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-figures.html#sec-complex-fig",
+    "href": "chapters/02-figures.html#sec-complex-fig",
+    "title": "2  Figures",
+    "section": "2.3 Complex figure captions",
+    "text": "2.3 Complex figure captions\nFor captions that require markdown formatting, we recommend setting the figure within a div as shown below. Additionally, can provide a fig-scap, which is a shorter version of the caption. The fig-scap will be printed in the List of Figures at the beginning of the PDF document, whereas the full caption will be used in the text. When using the div approach below, the full caption is included after the R chunk that generates the figure.\n::: {#fig-pct-proficient fig-scap=\"Percentage of students proficient by grade\"}\n\n```{r}\n#| fig-alt: |\n#|   Line plot showing the percentage of student proficient by grade and\n#|   subject.\n\nexample_dat |&gt;\n  mutate(proficient = pl %in% c(\"At Target\", \"Advanced\")) |&gt;\n  summarize(pct_proficient = mean(proficient), .by = c(grade, subject)) |&gt;\n  ggplot(aes(x = factor(grade), y = pct_proficient)) +\n  facet_grid(cols = vars(subject)) +\n  geom_line(group = 1) +\n  labs(x = \"Grade\", y = \"% Proficient\")\n```\n\nPercentage of student proficient by grade (*N* = `r fmt_count(nrow(example_dat))`)\n\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.4: Percentage of students proficient by grade (N = 14,005)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Figures</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-figures.html#figure-notes",
+    "href": "chapters/02-figures.html#figure-notes",
+    "title": "2  Figures",
+    "section": "2.4 Figure notes",
+    "text": "2.4 Figure notes\nUse the fig-note chunk option to add a note below a figure’s caption, as shown in Figure 2.5. The note is formatted as markdown and is left out of the List of Figures. For a figure placed in a div, fig-note can be set as an attribute on the div instead, similar to fig-scap in Section 2.3 (e.g., ::: {#fig-example fig-note=\"...\"}).\n\n\n\n\n\n\n\n\nFigure 2.5: Distribution of performance levels for grades 3–8Note. Grades with fewer than 20 students (n &lt; 20) were omitted.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Figures</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html",
+    "href": "chapters/03-tables.html",
+    "title": "3  Tables",
+    "section": "",
+    "text": "3.1 Standard tables\nThis chapter focuses on tables. Tables are created with the gt package, and the gt_atlas() helper defined in _common.R applies the house formatting: decimal alignment, one decimal place for counts and percentages, three decimal places with no leading zero for values bounded by −1 and 1 (e.g., correlations and proportions), and an indent for rows within row groups. Captions are placed above tables, and table numbers are added automatically from the tbl- label.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html#standard-tables",
+    "href": "chapters/03-tables.html#standard-tables",
+    "title": "3  Tables",
+    "section": "",
+    "text": "3.1.1 Markdown tables\nSmall tables with fixed content can be written directly in markdown, as in Table 3.1. The caption and label follow the table on a line beginning with a colon.\n\n\n\nTable 3.1: Correspondence of complexity bands and linkage levels\n\n\n\n\n\nFirst Contact complexity band\nLinkage level\n\n\n\n\nFoundational\nInitial\n\n\nBand 1\nInitial\n\n\nBand 2\nPrecursor\n\n\nBand 3\nTarget\n\n\n\n\n\n\n\n\n3.1.2 Tables from data\nMost tables are created from data with gt. Table 3.2 shows the distribution of performance levels by grade, using the default formatting from gt_atlas().\n\n\n\n\nTable 3.2: Percentage of students achieving at each performance level by grade\n\n\n\n\n\n\n\n\n\nGrade\nn\nEmerging (%)\nApproaching (%)\nAt Target (%)\nAdvanced (%)\nAt Target + Advanced (%)\n\n\n\n\n3\n1,956 \n54.9\n22.1\n16.2\n6.9\n23.1\n\n\n4\n1,930 \n54.8\n22.2\n17.1\n6.0\n23.1\n\n\n5\n1,966 \n54.5\n22.1\n17.6\n5.8\n23.4\n\n\n6\n1,902 \n55.6\n21.5\n17.1\n5.7\n22.9\n\n\n7\n1,817 \n55.8\n21.5\n16.7\n5.9\n22.7\n\n\n8\n1,944 \n55.5\n22.0\n15.8\n6.6\n22.5\n\n\n9\n  223 \n49.3\n26.0\n17.9\n6.7\n24.7\n\n\n10\n  188 \n56.9\n20.7\n17.6\n4.8\n22.3\n\n\n11\n1,895 \n56.4\n22.7\n16.1\n4.7\n20.9\n\n\n12\n  184 \n54.3\n26.1\n14.1\n5.4\n19.6",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html#text-heavy-tables",
+    "href": "chapters/03-tables.html#text-heavy-tables",
+    "title": "3  Tables",
+    "section": "3.2 Text-heavy tables",
+    "text": "3.2 Text-heavy tables\nTables can also contain longer text. Column widths can be set with cols_width() so that text wraps within cells, as in Table 3.3. Table 3.3 also includes a footnote attached to a single cell, created with tab_footnote(). Use opt_footnote_marks(marks = \"standard\") to use symbols (*, †, ‡) rather than numbers, which could be confused with values in the table.\n\n\n\n\nTable 3.3: Variables included in the propensity score models\n\n\n\n\n\n\n\n\n\n\n\n\n\nPredictor\nDescription\n\n\n\n\nGender\nStudent's reported gender\n\n\nRace\nStudent's reported race\n\n\nHispanic ethnicity\nStudent's recognition of their Hispanic ethnicity\n\n\nPrimary disability\nStudent's reported disability category\n\n\nEnglish learning (EL) participation\nStudent's eligibility or participation in EL services\n\n\nComputer use\nStudent's primary use of a computer during instruction\n\n\nEducational placement\nStudent's educational placement (e.g., regular class, resource room, separate class)\n\n\nPrimary language\nIs English the student's primary language (Yes or No)\n\n\nSubject-specific complexity band\nStudent's subject complexity band, based on domain-specific questions on the First Contact survey (i.e., ELA, mathematics, and science)\n\n\nWriting complexity band*\nStudent's writing complexity band, based on responses to the First Contact survey\n\n\nExpressive communication band\nStudent's expressive communication band, based on responses to the First Contact survey\n\n\nReceptive communication score\nStudent's sum score of receptive communication items on the First Contact survey\n\n\n\n\n* Only included for English language arts models.\n\n\n\n\n\n\n\n\n\n\n\n\nText-heavy tables can also combine wrapped text with spanning headers and empty cells. Table 3.4 summarizes the sources of validity evidence for each claim, with empty cells shown as blanks using sub_missing(missing_text = \"\").\n\n\n\n\nTable 3.4: DLM Alternate Assessment System claims and sources of updated evidence\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClaim\n\nSources of evidence\n\n\n\nTest content\nResponse processes\nInternal structure\nRelations with other variables\nConsequences of testing\n\n\n\n\n1. Mastery results represent what students know and can do.\n3.1, 3.2, 3.3, 3.4, 4.1, 4.3, 4.4, 4.5, 7.1, 7.2\n4.1, 4.2\n3.3, 3.4, 3.6, 5.1, 8.1\n7.3\n3.5, 7.1, 7.2\n\n\n2. Results indicate summative performance relative to alternate achievement standards.\n7.1, 7.2\n\n\n8.1\n\n\n3.5, 7.1, 7.2\n\n\n3. Results can be used for instructional decision-making.\n\n\n\n\n\n\n\n\n3.5\n\n\n\n\nNote. Only direct sources of evidence are listed. Some propositions are also supported indirectly by evidence presented for other propositions.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html#grouped-tables",
+    "href": "chapters/03-tables.html#grouped-tables",
+    "title": "3  Tables",
+    "section": "3.3 Grouped tables",
+    "text": "3.3 Grouped tables\n\n3.3.1 Row groups\nRows can be organized into groups with the groupname_col argument of gt() (or with tab_row_group()). When a table has row groups, gt_atlas() indents the rows within each group, as shown in Table 3.5.\n\n\n\n\nTable 3.5: Demographic characteristics of students\n\n\n\n\n\n\n\n\n\nGroup\nn\n%\n\n\n\n\nGender\n\n\nMale\n 9,312 \n   66.3\n\n\nFemale\n 4,726 \n   33.7\n\n\nNonbinary/undesignated\n     0 \n    0.0\n\n\nRace\n\n\nWhite\n 9,915 \n   70.6\n\n\nAfrican American\n 2,496 \n   17.8\n\n\nTwo or more races\n   785 \n    5.6\n\n\nAsian\n   440 \n    3.1\n\n\nAmerican Indian\n   262 \n    1.9\n\n\nNative Hawaiian or Pacific Islander\n   129 \n    0.9\n\n\nAlaska Native\n    11 \n&lt;0.1\n\n\nHispanic ethnicity\n\n\nNon-Hispanic\n12,325 \n   87.8\n\n\nHispanic\n 1,713 \n   12.2\n\n\nEnglish learning (EL) participation\n\n\nNot EL eligible or monitored\n12,977 \n   92.4\n\n\nEL eligible or monitored\n 1,061 \n    7.6\n\n\n\n\n\n\n\n\n\n\n\n\n3.3.2 Spanning column headers\nRelated columns can be placed under a shared header with tab_spanner(). Table 3.6 uses spanners to group the count and percentage for each performance level, in addition to row groups. Wide tables like this one may need a smaller font (see Table 3.4) or a landscape page in the PDF.\nTo place a table on a landscape page, wrap the chunk in a .landscape div. In the PDF, the div starts a new landscape page and the text after it continues on a new portrait page. The website ignores the div.\n::: {.landscape}\n\n```{r}\n#| label: tbl-spanners\n#| tbl-cap: Science performance level distributions by demographic subgroup\n\nsubgroup_pl |&gt;\n  gt(groupname_col = \"variable\") |&gt;\n  ...\n```\n\n:::\n\n\n\n\n\nTable 3.6: Science performance level distributions by demographic subgroup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSubgroup\n\nEmerging\n\n\nApproaching\n\n\nAt Target\n\n\nAdvanced\n\n\nAt Target + Advanced\n\n\n\nn\n%\nn\n%\nn\n%\nn\n%\nn\n%\n\n\n\n\nGender\n\n\nMale\n17,355 \n58.5\n6,381 \n21.5\n4,727 \n15.9\n1,186 \n4.0\n5,913 \n19.9\n\n\nFemale\n 8,619 \n60.0\n3,111 \n21.7\n2,165 \n15.1\n  461 \n3.2\n2,626 \n18.3\n\n\nNonbinary/undesignated\n    16 \n51.6\n   10 \n32.3\n    5 \n16.1\n    0 \n0.0\n    5 \n16.1\n\n\nRace\n\n\nWhite\n14,235 \n58.1\n5,352 \n21.9\n3,904 \n15.9\n  997 \n4.1\n4,901 \n20.0\n\n\nAfrican American\n 5,296 \n58.6\n1,946 \n21.5\n1,476 \n16.3\n  324 \n3.6\n1,800 \n19.9\n\n\nTwo or more races\n 4,029 \n59.2\n1,506 \n22.1\n1,057 \n15.5\n  209 \n3.1\n1,266 \n18.6\n\n\nAsian\n 1,749 \n70.5\n  432 \n17.4\n  249 \n10.0\n   50 \n2.0\n  299 \n12.1\n\n\nAmerican Indian\n   453 \n53.4\n  186 \n21.9\n  160 \n18.8\n   50 \n5.9\n  210 \n24.7\n\n\nNative Hawaiian or Pacific Islander\n   191 \n61.0\n   62 \n19.8\n   45 \n14.4\n   15 \n4.8\n   60 \n19.2\n\n\nAlaska Native\n    37 \n58.7\n   18 \n28.6\n    6 \n 9.5\n    2 \n3.2\n    8 \n12.7\n\n\nHispanic ethnicity\n\n\nNon-Hispanic\n20,164 \n59.2\n7,320 \n21.5\n5,278 \n15.5\n1,297 \n3.8\n6,575 \n19.3\n\n\nHispanic\n 5,826 \n58.4\n2,182 \n21.9\n1,619 \n16.2\n  350 \n3.5\n1,969 \n19.7\n\n\nEnglish learning (EL) participation\n\n\nNot EL eligible or monitored\n24,151 \n59.1\n8,824 \n21.6\n6,389 \n15.6\n1,534 \n3.8\n7,923 \n19.4\n\n\nEL eligible or monitored\n 1,839 \n58.6\n  678 \n21.6\n  508 \n16.2\n  113 \n3.6\n  621 \n19.8\n\n\n\n\n\n\n\n\n\n\n\nTable 3.7 shows a common layout for survey results, with spanners for each response option, wrapped text in the first column, and a note defining the abbreviations used in the column headers.\n\n\n\n\nTable 3.7: Test administrator responses regarding test administration\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatement\n\nSD\n\n\nD\n\n\nA\n\n\nSA\n\n\nA+SA\n\n\n\nn\n%\nn\n%\nn\n%\nn\n%\nn\n%\n\n\n\n\nI was confident in my ability to deliver DLM testlets.\n 93 \n1.2\n156 \n2.1\n3,113 \n41.3\n4,182 \n55.4\n7,295 \n96.7\n\n\nRequired Test Administrator Training prepared me for the responsibilities of a test administrator.\n149 \n2.0\n380 \n5.0\n3,561 \n47.3\n3,436 \n45.7\n6,997 \n93.0\n\n\nI have access to curriculum aligned with the content measured by DLM assessments.\n227 \n3.0\n651 \n8.6\n3,648 \n48.5\n3,003 \n39.9\n6,651 \n88.3\n\n\nI used manuals and/or the DLM Educator Resource Page materials.\n148 \n2.0\n507 \n6.7\n3,821 \n50.6\n3,069 \n40.7\n6,890 \n91.3\n\n\n\n\nNote. SD = strongly disagree; D = disagree; A = agree; SA = strongly agree; A+SA = agree and strongly agree.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html#table-notes-and-footnotes",
+    "href": "chapters/03-tables.html#table-notes-and-footnotes",
+    "title": "3  Tables",
+    "section": "3.4 Table notes and footnotes",
+    "text": "3.4 Table notes and footnotes\nFollowing APA style, general notes about a table are placed below the table, beginning with Note. These are created with tab_source_note(). Notes that apply to specific cells use tab_footnote(), which adds a mark to the cell and the matching footnote below the table.\n\n3.4.1 Missing values and specific notes\nTable 3.8 includes both kinds of notes. Missing values are shown with an em dash using sub_missing(), and footnotes explain why particular cells are empty.\n\n\n\n\nTable 3.8: Area under the ROC curve, by assessment model, grade, and subject\n\n\n\n\n\n\n\n\n\nGrade or course\nEnglish language arts\nMathematics\nScience\n\n\n\n\nInstructionally Embedded\n\n\n3\n.535\n.542\n* —\n\n\n4\n.578\n.562\n* —\n\n\n5\n.539\n.575\n* —\n\n\n6\n.567\n.590\n* —\n\n\n7\n.568\n.551\n* —\n\n\n8\n.589\n.554\n* —\n\n\n9\n.617\n.611\n* —\n\n\n10\n† —\n.598\n* —\n\n\n11\n.566\n.541\n* —\n\n\nYear-End\n\n\n3\n.529\n.520\n.778\n\n\n4\n.515\n.517\n.570\n\n\n5\n.526\n.529\n.534\n\n\n6\n.516\n.539\n.719\n\n\n7\n.526\n.526\n.634\n\n\n8\n.534\n.525\n.524\n\n\n9\n.693\n.668\n.530\n\n\n10\n.840\n.867\n‡ —\n\n\n11\n.516\n.536\n‡ —\n\n\nBiology\n—\n—\n.449\n\n\n\n\n* All science assessments follow a year-end assessment model.\n\n\n\n\n† Instructionally embedded ELA assessments are grade banded for grades 9–10 and 11–12.\n\n\n\n\n‡ Science is assessed in grade band 9–12 and Biology.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.2 Estimates with intervals\nEstimates are often reported with an interval in parentheses, as in Table 3.9. Because these cells contain text rather than numbers, they are formatted before building the table (here with a small fmt_ci() helper defined in the setup chunk). Multiline column headers can be created with md() and &lt;br&gt;.\n\n\n\n\nTable 3.9: Average linkage level reliability, by demographic category\n\n\n\n\n\n\n\n\n\nGroup\nTetrachoric correlation(95% CI)\nClassification agreement rate(95% CI)\nCohen’s kappa(95% CI)\n\n\n\n\nGender\n\n\nFemale\n.78 (.77–.79)\n.84 (.83–.85)\n.61 (.59–.62)\n\n\nMale\n.76 (.75–.77)\n.83 (.82–.83)\n.58 (.57–.59)\n\n\nRace\n\n\nAfrican American\n.77 (.76–.78)\n.83 (.82–.84)\n.58 (.56–.59)\n\n\nAlaska Native\n.82 (.76–.89)\n.86 (.83–.91)\n.67 (.57–.83)\n\n\nAmerican Indian\n.83 (.77–.90)\n.86 (.83–.91)\n.69 (.58–.85)\n\n\nAsian\n.86 (.81–.90)\n.88 (.84–.91)\n.78 (.69–.85)\n\n\nNative Hawaiian or Pacific Islander\n.82 (.75–.89)\n.86 (.82–.91)\n.67 (.56–.85)\n\n\nTwo or more races\n.86 (.84–.88)\n.88 (.86–.89)\n.73 (.69–.77)\n\n\nWhite\n.76 (.75–.76)\n.83 (.82–.83)\n.57 (.56–.58)\n\n\nHispanic ethnicity\n\n\nHispanic\n.86 (.85–.88)\n.88 (.87–.89)\n.73 (.70–.75)\n\n\nNon-Hispanic\n.76 (.75–.76)\n.83 (.82–.83)\n.57 (.56–.58)\n\n\nEnglish learning (EL) participation\n\n\nEL eligible or monitored\n.84 (.82–.87)\n.87 (.85–.89)\n.71 (.67–.75)\n\n\nNot EL eligible or monitored\n.76 (.76–.77)\n.83 (.82–.83)\n.58 (.57–.59)\n\n\n\n\nNote. CI = credible interval from the multilevel regression model after completing poststratification.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.3 Signed values\nTables of differences or changes include negative values. gt formats these with a true minus sign (−) rather than a hyphen. In Table 3.10, extreme-value formatting is turned off with gt_atlas(fmt_extreme = FALSE) so that small changes are shown as numbers rather than as “&lt;0.1”.\n\n\n\n\nTable 3.10: Science performance level changes, by grade or course, 2017–2018 to 2018–2019\n\n\n\n\n\n\n\n\n\nPerformance level\n\nGrade or course\n\n\n\n3\n4\n5\n6\n7\n8\n9–12\nBiology\n\n\n\n\nEmerging\n−22.3\n−.9\n 2.4\n−7.0\n−12.4\n 1.5\n 0.7\n−1.1\n\n\nApproaching the Target\n 15.8\n−.1\n−1.7\n−2.2\n −1.6\n−0.1\n 0.7\n−0.7\n\n\nAt Target\n −1.3\n .2\n−0.8\n 6.3\n  9.5\n−1.6\n−1.1\n−0.9\n\n\nAdvanced\n  7.9\n .8\n 0.0\n 2.8\n  4.5\n 0.1\n−0.4\n 2.7\n\n\nAt Target/Advanced\n  6.5\n 1.0\n−0.7\n 9.2\n 14.0\n−1.4\n−1.4\n 1.8\n\n\n\n\n\n\n\n\n\n\n\n\n3.4.4 Proportions and many columns\nTable 3.11 has many narrow columns under a single spanner. Proportions are formatted with three decimals and no leading zero, and the note gives the number of linkage levels summarized.\n\n\n\n\nTable 3.11: Reliability summaries across all linkage levels: Proportion of linkage levels falling within a specified index range\n\n\n\n\n\n\n\n\n\nReliability index\n\nIndex range\n\n\n\n0.00–0.59\n0.60–0.64\n0.65–0.69\n0.70–0.74\n0.75–0.79\n0.80–0.84\n0.85–0.89\n0.90–0.94\n0.95–1.00\n\n\n\n\nTetrachoric correlation\n.078\n.059\n.098\n.108\n.196\n.216\n.118\n.088\n.039\n\n\nClassification agreement rate\n.000\n.000\n.010\n.039\n.137\n.304\n.255\n.196\n.059\n\n\nClassification consistency\n.010\n.059\n.098\n.157\n.186\n.167\n.157\n.088\n.078\n\n\nCohen's kappa\n.745\n.108\n.049\n.020\n.069\n.010\n.000\n.000\n.000\n\n\n\n\nNote. Total linkage levels = 102.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html#long-tables",
+    "href": "chapters/03-tables.html#long-tables",
+    "title": "3  Tables",
+    "section": "3.5 Long tables",
+    "text": "3.5 Long tables\nBy default, a table is kept on a single page in the PDF. Long tables can be allowed to break across pages by adding #| classes: breakable to the chunk options. The header row is repeated on each page, as shown in Table 3.12. On each page after the first, the caption is also repeated above the header, followed by “(continued)”.\n\n\n\n\nTable 3.12: Summary of Essential Element reliability evidence\n\n\n\n\n\n\n\n\n\nGrade\nEssential Element\nLinkage levels mastered correlation\nAverage student classification agreement\nAverage student Cohen's kappa\n\n\n\n\n3\nSCI.EE.3.ESS1-2\n.866\n.938\n.969\n\n\n3\nSCI.EE.3.ESS2-4\n.743\n.987\n.821\n\n\n3\nSCI.EE.3.LS1-2\n.818\n.966\n.837\n\n\n3\nSCI.EE.3.LS2-3\n.875\n.974\n.870\n\n\n3\nSCI.EE.3.PS1-3\n.873\n.958\n.938\n\n\n3\nSCI.EE.3.PS2-4\n.888\n.937\n.862\n\n\n4\nSCI.EE.4.ESS1-4\n.758\n.973\n.867\n\n\n4\nSCI.EE.4.ESS2-2\n.770\n.979\n.859\n\n\n4\nSCI.EE.4.LS1-2\n.651\n.983\n.854\n\n\n4\nSCI.EE.4.LS2-3\n.816\n.961\n.885\n\n\n4\nSCI.EE.4.PS1-1\n.614\n.979\n.963\n\n\n4\nSCI.EE.4.PS2-3\n.811\n.967\n.929\n\n\n5\nSCI.EE.5.ESS1-3\n.678\n.986\n.958\n\n\n5\nSCI.EE.5.ESS2-3\n.946\n.974\n.938\n\n\n5\nSCI.EE.5.LS1-4\n.691\n.971\n.959\n\n\n5\nSCI.EE.5.LS2-1\n.652\n.980\n.880\n\n\n5\nSCI.EE.5.PS1-4\n.854\n.964\n.826\n\n\n5\nSCI.EE.5.PS2-1\n.848\n.961\n.960\n\n\n6\nSCI.EE.6.ESS1-4\n.632\n.971\n.919\n\n\n6\nSCI.EE.6.ESS2-3\n.865\n.931\n.857\n\n\n6\nSCI.EE.6.LS1-3\n.814\n.979\n.904\n\n\n6\nSCI.EE.6.LS2-2\n.799\n.965\n.970\n\n\n6\nSCI.EE.6.PS1-3\n.721\n.966\n.851\n\n\n6\nSCI.EE.6.PS2-3\n.731\n.951\n.879\n\n\n7\nSCI.EE.7.ESS1-2\n.920\n.989\n.930\n\n\n7\nSCI.EE.7.ESS2-4\n.827\n.988\n.943\n\n\n7\nSCI.EE.7.LS1-2\n.658\n.951\n.985\n\n\n7\nSCI.EE.7.LS2-1\n.618\n.982\n.972\n\n\n7\nSCI.EE.7.PS1-4\n.840\n.964\n.916\n\n\n7\nSCI.EE.7.PS2-1\n.692\n.983\n.917\n\n\n8\nSCI.EE.8.ESS1-3\n.856\n.977\n.850\n\n\n8\nSCI.EE.8.ESS2-4\n.614\n.987\n.902\n\n\n8\nSCI.EE.8.LS1-3\n.793\n.974\n.821\n\n\n8\nSCI.EE.8.LS2-3\n.614\n.976\n.979\n\n\n8\nSCI.EE.8.PS1-3\n.639\n.937\n.868\n\n\n8\nSCI.EE.8.PS2-4\n.831\n.963\n.979\n\n\n9\nSCI.EE.9.ESS1-3\n.920\n.960\n.853\n\n\n9\nSCI.EE.9.ESS2-4\n.710\n.937\n.908\n\n\n9\nSCI.EE.9.LS1-2\n.718\n.952\n.913\n\n\n9\nSCI.EE.9.LS2-2\n.845\n.964\n.899\n\n\n9\nSCI.EE.9.PS1-4\n.615\n.969\n.932\n\n\n9\nSCI.EE.9.PS2-1\n.872\n.966\n.860\n\n\n10\nSCI.EE.10.ESS1-3\n.819\n.963\n.878\n\n\n10\nSCI.EE.10.ESS2-4\n.888\n.934\n.909\n\n\n10\nSCI.EE.10.LS1-1\n.908\n.995\n.867\n\n\n10\nSCI.EE.10.LS2-3\n.679\n.954\n.832\n\n\n10\nSCI.EE.10.PS1-1\n.670\n.936\n.883\n\n\n10\nSCI.EE.10.PS2-2\n.843\n.950\n.946\n\n\n11\nSCI.EE.11.ESS1-1\n.823\n.950\n.980\n\n\n11\nSCI.EE.11.ESS2-1\n.892\n.934\n.859\n\n\n11\nSCI.EE.11.LS1-2\n.622\n.955\n.921\n\n\n11\nSCI.EE.11.LS2-4\n.709\n.952\n.864\n\n\n11\nSCI.EE.11.PS1-3\n.748\n.989\n.923\n\n\n11\nSCI.EE.11.PS2-4\n.684\n.939\n.912\n\n\n12\nSCI.EE.12.ESS1-2\n.782\n.939\n.930\n\n\n12\nSCI.EE.12.ESS2-2\n.809\n.939\n.870\n\n\n12\nSCI.EE.12.LS1-1\n.736\n.972\n.954\n\n\n12\nSCI.EE.12.LS2-2\n.783\n.949\n.889\n\n\n12\nSCI.EE.12.PS1-3\n.626\n.994\n.936\n\n\n12\nSCI.EE.12.PS2-4\n.660\n.978\n.980",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-tables.html#sec-complex-tbl",
+    "href": "chapters/03-tables.html#sec-complex-tbl",
+    "title": "3  Tables",
+    "section": "3.6 Complex table captions",
+    "text": "3.6 Complex table captions\nAs with figures (Section 2.3), captions that require markdown formatting or inline code can be written by placing the table within a div. The tbl-scap attribute provides a shorter caption for the List of Tables at the beginning of the PDF document. The full caption is included after the R chunk that generates the table.\n::: {#tbl-complex tbl-scap=\"Representation of demographic categories within retained student groups\"}\n\n```{r}\nrep_tab |&gt;\n  gt(groupname_col = \"variable\") |&gt;\n  gt_atlas() |&gt;\n  ...\n```\n\nRepresentation of demographic categories within student group and linkage level combinations that met sample size for linkage level reliability (*N* = `r fmt_count(sum(rep_tab$comb_n[rep_tab$variable == 'Gender']))`)\n\n:::\n\n\n\nTable 3.13: Representation of demographic categories within student group and linkage level combinations that met sample size for linkage level reliability (N = 3,721)\n\n\n\n\n\n\n\n\n\n\nGroup\n\nCombinations (N = 3,721)\n\n\nLinkage levels (N = 1,275)\n\n\n\nn\n%\nn\n%\n\n\n\n\nGender\n\n\nFemale\n1,477 \n39.7\n855 \n67.1\n\n\nMale\n2,244 \n60.3\n995 \n78.0\n\n\nRace\n\n\nAfrican American\n1,136 \n30.5\n685 \n53.7\n\n\nAlaska Native\n    0 \n 0.0\n  0 \n 0.0\n\n\nAmerican Indian\n    0 \n 0.0\n  0 \n 0.0\n\n\nAsian\n   38 \n 1.0\n 38 \n 3.0\n\n\nNative Hawaiian or Pacific Islander\n    0 \n 0.0\n  0 \n 0.0\n\n\nTwo or more races\n  174 \n 4.7\n151 \n11.8\n\n\nWhite\n2,373 \n63.8\n996 \n78.1\n\n\nHispanic ethnicity\n\n\nHispanic\n  523 \n14.1\n260 \n20.4\n\n\nNon-Hispanic\n3,198 \n85.9\n996 \n78.1\n\n\nEnglish learning (EL) participation\n\n\nEL eligible or monitored\n  188 \n 5.1\n127 \n10.0\n\n\nNot EL eligible or monitored\n3,533 \n94.9\n996 \n78.1",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tables</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Clark, A. K. (2016). Item writing and review practices for alternate\nassessments.\n\n\nHenson, R. A., Templin, J. L., & Willse, J. T. (2009). Defining a\nfamily of cognitive diagnosis models using log-linear models with latent\nvariables. Psychometrika, 74(2), 191–210. https://doi.org/10.1007/s11336-008-9089-5\n\n\nThompson, W. J. (2026). Measr: Bayesian psychometric measurement\nusing stan. https://measr.info",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "appendices/a-supplemental-info.html",
+    "href": "appendices/a-supplemental-info.html",
+    "title": "Appendix A — Supplemental Tables",
+    "section": "",
+    "text": "This appendix demonstrates appendix numbering. Tables and figures in an appendix are numbered with the appendix letter, as in Table A.1.\n\n\n\n\nTable A.1: Student participation by grade (simulated)\n\n\n\n\n\n\n\n\n\nGrade\nStudents\nFemale\nEnglish learner\n\n\n\n\n3\n7,490\n33.0%\n9.9%\n\n\n4\n7,367\n35.2%\n7.8%\n\n\n5\n8,483\n35.3%\n8.7%\n\n\n6\n9,486\n34.1%\n6.5%\n\n\n7\n8,607\n34.9%\n6.8%\n\n\n8\n8,461\n32.8%\n10.5%\n\n\n9\n8,746\n33.0%\n8.1%\n\n\n10\n7,343\n34.5%\n9.7%\n\n\n11\n9,190\n35.2%\n10.1%\n\n\n12\n7,929\n32.2%\n10.8%",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Supplemental Tables</span>"
+    ]
+  }
+]

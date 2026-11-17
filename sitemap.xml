@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/index.html</loc>
+    <lastmod>2026-11-17T15:07:41.140Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/chapters/01-text-features.html</loc>
+    <lastmod>2026-11-17T15:07:41.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/chapters/02-figures.html</loc>
+    <lastmod>2026-11-17T15:07:41.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/chapters/03-tables.html</loc>
+    <lastmod>2026-11-17T15:07:41.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/references.html</loc>
+    <lastmod>2026-11-17T15:07:41.140Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/appendices/a-supplemental-info.html</loc>
+    <lastmod>2026-11-17T15:07:41.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example-dlm-report.atlas-aai.github.io/example-manual.pdf</loc>
+    <lastmod>2026-11-17T15:08:32.482Z</lastmod>
+  </url>
+</urlset>
