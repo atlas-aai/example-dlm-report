@@ -1,1 +1,1 @@
-Sitemap: https://example-dlm-report.atlas-aai.github.io/sitemap.xml
+Sitemap: https://atlas-aai.github.io/example-dlm-report/sitemap.xml
