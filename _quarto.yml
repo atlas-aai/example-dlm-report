@@ -1,0 +1,54 @@
+project:
+  type: book
+  output-dir: _book
+  execute-dir: project
+
+book:
+  title: "Report Title"
+  subtitle: "A subtitle"
+  date: today
+  date-format: "MMMM YYYY"
+  output-file: "dlm-ye-techmanual-2025-2026"
+  downloads: [pdf]
+  search: true
+  site-url: https://dynamiclearningmaps.org
+  favicon: _extensions/dlm-report/assets/favicon.png
+  navbar:
+    logo: _extensions/dlm-report/assets/dlm-logo-white.png
+    logo-alt: "Dynamic Learning Maps"
+    title: false
+  sidebar:
+    style: docked
+    collapse-level: 2
+  page-navigation: true
+  page-footer:
+    left: "Copyright &copy; 2026 ATLAS, University of Kansas"
+    right:
+      - text: "dynamiclearningmaps.org"
+        href: https://dynamiclearningmaps.org
+  chapters:
+    - index.qmd
+    - chapters/01-text-features.qmd
+    - chapters/02-figures.qmd
+    - chapters/03-tables.qmd
+    - references.qmd
+  appendices:
+    - appendices/a-supplemental-info.qmd
+
+bibliography: bib/references.bib
+
+# DLM report metadata (used by both the website and the PDF)
+dlm:
+  report-type: "Report Type"
+  divider: true          # PDF divider pages: true, false, or after-first
+  running-title: "Running title"
+  citation: >-
+    Dynamic Learning Maps Consortium. (2026). *Report title: A subtitle*.
+    University of Kansas; Accessible Teaching, Learning, and Assessment Systems.
+  funding: >-
+    Insert additional information here, such as a conflict on interest and/or
+    funding statement.
+
+format:
+  dlm-report-html: default
+  dlm-report-typst: default

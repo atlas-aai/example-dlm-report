@@ -1,0 +1,570 @@
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------------------
+// DLM report website
+// Shared rules for the light and dark themes. Colors come from the semantic
+// tokens defined in dlm-light.scss / dlm-dark.scss.
+// ---------------------------------------------------------------------------
+
+body {
+  font-feature-settings: "cv11", "ss03";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba($dlm-sky, 0.35); }
+
+a { text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+main a:not(.btn):not(.nav-link):not(.anchorjs-link) { text-decoration: none; border-bottom: 1px solid rgba($dlm-accent, 0.25); }
+main a:not(.btn):not(.nav-link):not(.anchorjs-link):hover { border-bottom-color: currentColor; }
+
+:focus-visible { outline: 3px solid $dlm-sky; outline-offset: 2px; border-radius: 4px; }
+
+// Navbar ----------------------------------------------------------------------
+.navbar {
+  border-bottom: 3px solid $dlm-sky;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  .navbar-brand { padding: 0; }
+  .navbar-logo, .navbar-brand img { max-height: 34px; height: 34px; }
+  .nav-link { font-weight: 500; font-size: 0.92rem; letter-spacing: 0.01em; }
+  .nav-link.active { box-shadow: inset 0 -2px 0 $dlm-sky; }
+}
+
+#quarto-search .aa-DetachedSearchButton { border-radius: 999px; }
+
+// Sidebar ---------------------------------------------------------------------
+#quarto-sidebar {
+  border-right: 1px solid $dlm-border;
+  font-size: 0.9rem;
+
+  .sidebar-title, .sidebar-title a {
+    color: $dlm-heading;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .sidebar-tools-main a { color: $dlm-accent; }
+
+  .sidebar-item { margin-top: 1px; }
+  .sidebar-item-container .text-start,
+  .sidebar-link {
+    border-radius: 6px;
+  }
+  .sidebar-link {
+    padding: 0.28rem 0.6rem;
+    transition: background-color 120ms ease;
+    &:hover { background: $dlm-surface-2; text-decoration: none; }
+  }
+  .sidebar-link.active {
+    color: $dlm-accent;
+    font-weight: 600;
+    background: $dlm-accent-soft;
+    box-shadow: inset 3px 0 0 $dlm-accent;
+  }
+  .menu-text:has(> .chapter-number) { display: inline-flex; gap: 0.45rem; }
+  .sidebar-item .chapter-number { color: $dlm-muted; font-variant-numeric: tabular-nums; min-width: 1.1em; }
+  .sidebar-link.active .chapter-number { color: inherit; }
+  // Entries under a section heading align and size like top-level chapters
+  .sidebar-section { padding-left: 0; }
+  .sidebar-section .sidebar-item { font-size: inherit; }
+  // Section headings (e.g., "Appendices") only; their child entries match chapters
+  .sidebar-item-section > .sidebar-item-container > .sidebar-item-text {
+    color: $dlm-muted;
+    font-weight: 600;
+  }
+}
+
+// Breadcrumbs (mobile header): meet the WCAG 2.2 24px minimum target size
+.quarto-page-breadcrumbs a {
+  display: inline-block;
+  min-height: 24px;
+  line-height: 24px;
+}
+
+// Chapter title block ---------------------------------------------------------
+#title-block-header.quarto-title-block.default {
+  margin-bottom: 2rem;
+  .quarto-title::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 4px;
+    border-radius: 2px;
+    background: $dlm-sky;
+    margin-top: 1.1rem;
+  }
+}
+
+h1.title {
+  color: $dlm-heading;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 1.4rem + 2.2vw, 2.85rem);
+  line-height: 1.12;
+  margin-top: 0.5rem;
+
+  .chapter-number {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $dlm-accent;
+    margin-bottom: 0.6rem;
+    &::before { content: attr(data-dlm-label) "\00a0"; }
+  }
+  .chapter-title { display: block; }
+}
+
+.quarto-title .subtitle { color: $dlm-accent; font-weight: 500; }
+
+// Chapter blurb ({blurb="..."} on a level-1 heading)
+.dlm-blurb p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: $dlm-muted;
+  line-height: 1.55;
+  margin: -0.75rem 0 2rem;
+}
+#title-block-header .dlm-blurb p { margin: 0.9rem 0 0; max-width: 40rem; }
+
+// Section headings ------------------------------------------------------------
+h2, .h2 {
+  font-size: 1.6rem;
+  margin-top: 2.8rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  letter-spacing: -0.015em;
+}
+h3, .h3 { font-size: 1.25rem; margin-top: 2rem; letter-spacing: -0.01em; }
+h4, .h4 { font-size: 1.05rem; margin-top: 1.6rem; color: $dlm-accent; }
+h5, .h5, h6, .h6 { font-size: 1rem; margin-top: 1.4rem; }
+
+.header-section-number { color: inherit; margin-right: 0.35em; font-variant-numeric: tabular-nums; }
+
+main p, main li { max-width: 72ch; }
+
+// Tables ----------------------------------------------------------------------
+.cell-output-display:has(> table), .cell-output-display:has(> .table),
+.quarto-float:has(table) { overflow-x: auto; }
+
+// Tables are as wide as their content (Bootstrap's .table stretches them to
+// the full column), as in the PDF. A table with percentage column widths
+// (e.g., gt's cols_width(x ~ pct(30))) spans the column, since the PDF
+// measures those percentages against the page width.
+main table.table { width: auto; }
+main table.table:has(> colgroup > col[style*="%"]) { width: 100%; }
+
+main table, main .table {
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums lining-nums;
+  border-collapse: collapse;
+  border-bottom: 2px solid $dlm-heading;
+  margin-bottom: 0.5rem;
+  --bs-table-bg: transparent;
+  // Bootstrap stripes with an inset box-shadow that hides the hover color;
+  // the zebra rows below handle striping for all tables instead
+  --bs-table-striped-bg: transparent;
+  color: $dlm-ink;
+
+  thead th, thead td {
+    background: $dlm-table-head;
+    color: $dlm-heading;
+    font-weight: 650;
+    border-bottom: 2px solid $dlm-heading !important;
+    border-top: none;
+    vertical-align: bottom;
+  }
+  tbody tr:nth-child(even) > * { background: $dlm-zebra; }
+  tbody tr:hover > * { background: $dlm-accent-soft; }
+  td, th { padding: 0.42rem 0.75rem; border-color: $dlm-border; }
+  > :not(caption) > * > * { border-bottom-width: 1px; }
+}
+
+// gt tables -------------------------------------------------------------------
+// gt scopes its default CSS to each table's id, which outranks the rules above,
+// so these restore the report design (and dark mode) for every gt table.
+// Inline styles from gt::tab_style() still win over these.
+main div:has(> table.gt_table) { padding: 0 !important; }
+main .gt_table:has(> colgroup > col[style*="%"]) { width: 100% !important; }
+main .gt_table {
+  width: auto !important;
+  margin: 0 0 0.5rem !important;
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  line-height: inherit !important;
+  color: $dlm-ink !important;
+  background-color: transparent !important;
+  border-top: none !important;
+  border-bottom: 2px solid $dlm-heading !important;
+
+  .gt_heading, .gt_title, .gt_subtitle,
+  .gt_stub, .gt_stub_row_group, .gt_summary_row, .gt_grand_summary_row,
+  .gt_footnotes, .gt_sourcenotes {
+    background-color: transparent !important;
+    color: inherit !important;
+    border-color: $dlm-border !important;
+  }
+  // Notes are left aligned; otherwise they inherit Quarto's centering of
+  // figure contents (`.quarto-figure-center`)
+  .gt_footnote, .gt_sourcenote {
+    color: $dlm-muted !important;
+    font-size: 0.85em !important;
+    text-align: left !important;
+  }
+  // A note adds no width of its own, so it wraps at the table's width
+  // instead of widening the table (the wrapper is added in
+  // dlm-book-typst.lua)
+  .dlm-table-note { width: 0; min-width: 100%; }
+  // Footnote marks (tab_footnote()): gt sets them italic in a <sup>, which
+  // shrinks symbols like * and † until they're hard to read. Set them upright
+  // at full size instead, as in the PDF. Daggers sit on the baseline like
+  // letters, so they're raised a little; the font already draws the asterisk
+  // high, so it stays on the baseline.
+  .gt_footnote_marks { font-style: normal !important; }
+  // (Bootstrap raises <sup> with `top`, so the height is set there)
+  .gt_footnote_marks sup { font-size: 1em; vertical-align: baseline; top: -0.3em; }
+  .gt_footnote_marks.gt_asterisk sup { top: 0; }
+  .gt_col_headings, .gt_table_body { border-top: none !important; border-bottom: none !important; }
+  .gt_col_heading, .gt_column_spanner_outer {
+    background-color: $dlm-table-head !important;
+    color: $dlm-heading !important;
+    font-weight: 650 !important;
+  }
+  .gt_col_heading {
+    padding: 0.42rem 0.75rem !important;
+    border-bottom: 2px solid $dlm-heading !important;
+  }
+  .gt_column_spanner { border-bottom-color: $dlm-heading !important; }
+  // The spanner's underline is on its label (above); without this, the
+  // header-row rule for `thead th` adds a second line under the spanner
+  .gt_column_spanner_outer { border-bottom: none !important; }
+  // gt insets spanner underlines by 4px on each side, which leaves a gap
+  // between neighboring spanners, but drops the inset at the table's edges;
+  // keep it there too so the first and last underlines match the others
+  .gt_column_spanner_outer:first-child { padding-left: 4px !important; }
+  .gt_column_spanner_outer:last-child { padding-right: 4px !important; }
+  .gt_group_heading, .gt_empty_group_heading {
+    background-color: $dlm-surface-2 !important;
+    color: $dlm-heading !important;
+    font-weight: 650 !important;
+    border-color: $dlm-border !important;
+  }
+  .gt_row {
+    padding: 0.42rem 0.75rem !important;
+    border-top: none !important;
+    border-bottom: 1px solid $dlm-border !important;
+  }
+  .gt_striped { background-color: $dlm-zebra !important; }
+}
+
+// `::: {.center}` centers its text and `::: {.hanging}` gives each paragraph
+// a 0.5in hanging indent, as in APA references (the PDF does both in
+// dlm-report.lua)
+.center { text-align: center; }
+.hanging p { padding-left: 0.5in; text-indent: -0.5in; }
+
+// Captions --------------------------------------------------------------------
+figcaption, caption, .figure-caption, .quarto-float-caption, .quarto-float-caption-top {
+  color: $dlm-muted;
+  font-size: 0.9rem;
+  text-align: left;
+  caption-side: top;
+}
+.quarto-float figcaption, .quarto-float-caption-top, .quarto-float-caption-bottom,
+.quarto-figure-center > figure > figcaption { text-align: left !important; }
+// Figure notes (`fig-note`) sit on their own line, tight below the caption
+// (as in the PDF)
+.dlm-fig-note {
+  display: block;
+  margin-top: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+.dlm-cap-label {
+  color: $dlm-heading;
+  font-weight: 700;
+  margin-right: 0.6em;
+}
+.quarto-float { margin: 1.75rem 0; }
+// Quarto nests a figure.quarto-float inside div.quarto-float; overflow on the
+// outer one stops the margins collapsing, so space the outer one only
+.quarto-float .quarto-float { margin: 0; }
+.quarto-figure img, .cell-output-display img {
+  border-radius: 8px;
+}
+
+// Callouts --------------------------------------------------------------------
+.callout {
+  border-radius: 10px;
+  border-left-width: 4px !important;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  .callout-header { font-weight: 650; }
+  .callout-title-container { font-weight: 650; color: $dlm-heading; }
+}
+// Callout icons match the PDF's (drawn in callout() in typst-template.typ):
+// Font Awesome 6 Free "info", "lightbulb" and "triangle-exclamation" for
+// note, tip and warning, and a stop sign for important. Caution keeps Quarto's
+// Bootstrap "cone-striped", which the PDF also uses. Each is drawn as a mask so
+// it keeps Quarto's icon color for that type. Keep the paths in sync with
+// dlm-callout-icons in the Typst template.
+@mixin dlm-callout-icon($color, $svg) {
+  background-image: none !important;
+  background-color: shade-color($color, 10%);
+  -webkit-mask: url("data:image/svg+xml,#{$svg}") center / contain no-repeat;
+  mask: url("data:image/svg+xml,#{$svg}") center / contain no-repeat;
+}
+div.callout-note.callout .callout-icon::before {
+  @include dlm-callout-icon($blue, "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512'><path d='M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z'/></svg>");
+}
+div.callout-tip.callout .callout-icon::before {
+  @include dlm-callout-icon($green, "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'><path d='M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.200-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z'/></svg>");
+}
+div.callout-warning.callout .callout-icon::before {
+  @include dlm-callout-icon($yellow, "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>");
+}
+div.callout-important.callout .callout-icon::before {
+  @include dlm-callout-icon($red, "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M15.30 11.02 L11.02 15.30 L4.98 15.30 L0.70 11.02 L0.70 4.98 L4.98 0.70 L11.02 0.70 L15.30 4.98 Z M7.1 3.6 H8.9 L8.6 9.4 H7.4 Z M8 10.6 a1.05 1.05 0 1 0 0.001 0 Z'/></svg>");
+}
+
+// Code ------------------------------------------------------------------------
+// The border belongs to the outer box, which is what scrolls sideways; a
+// border on the inner <pre> would show as a stray line when scrolled
+div.sourceCode {
+  border-radius: 8px;
+  border: 1px solid $dlm-border;
+}
+div.sourceCode pre.sourceCode { border: none; }
+code { font-size: 0.88em; }
+// Comments and output stay upright (the highlighting theme italicizes them)
+div.sourceCode code span { font-style: normal; }
+p code:not(.sourceCode), li code:not(.sourceCode) {
+  background: $dlm-code-bg;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+// Equations -------------------------------------------------------------------
+.math.display { overflow-x: auto; overflow-y: hidden; }
+
+// Margin TOC ------------------------------------------------------------------
+#TOC, nav[role="doc-toc"] {
+  font-size: 0.85rem;
+  h2 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $dlm-muted;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  .nav-link { color: $dlm-muted; }
+  .nav-link.active { color: $dlm-accent; font-weight: 600; border-left-color: $dlm-accent; }
+  .header-section-number { color: inherit; }
+}
+
+// Page navigation -------------------------------------------------------------
+.page-navigation {
+  margin-top: 3.5rem;
+  .nav-page a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8rem 1.1rem;
+    border: 1px solid $dlm-border;
+    border-radius: 10px;
+    color: $dlm-heading;
+    font-weight: 600;
+    transition: border-color 120ms ease, background-color 120ms ease;
+    &:hover { border-color: $dlm-accent; background: $dlm-surface; text-decoration: none; }
+  }
+}
+
+// Footer ----------------------------------------------------------------------
+.nav-footer {
+  border-top: 3px solid $dlm-sky;
+  font-size: 0.85rem;
+  min-height: 4rem;
+  a { color: #FFFFFF; }
+}
+
+// References ------------------------------------------------------------------
+#refs .csl-entry, div.csl-entry {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  margin-bottom: 0.6em;
+}
+
+// Cover / home page hero ------------------------------------------------------
+#title-block-header.dlm-cover {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: $dlm-hero-bg;
+  border: 1px solid $dlm-border;
+  border-radius: 20px;
+  // Bottom padding keeps the cover's content (including the open citation
+  // panel) clear of the logo in the bottom-right corner
+  padding: clamp(5.5rem, 9vw, 7rem) clamp(1.5rem, 5vw, 3.25rem) 6rem;
+  margin: 0.5rem 0 3rem;
+  min-height: 420px;
+
+  .dlm-cover-ornament {
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .dlm-cover-ornament-left {
+    left: 0;
+    width: 230px;
+    height: 154px;
+    background-position: top left;
+  }
+  .dlm-cover-ornament-right {
+    right: 0;
+    width: 300px;
+    height: 324px;
+    background-position: top right;
+  }
+
+  .dlm-cover-inner { max-width: 31rem; position: relative; }
+
+  .dlm-eyebrow {
+    margin: 0 0 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $dlm-accent;
+  }
+
+  h1.title {
+    font-size: clamp(2.3rem, 1.5rem + 3vw, 3.4rem);
+    margin: 0;
+    letter-spacing: -0.025em;
+  }
+  .subtitle {
+    font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem);
+    margin: 0.75rem 0 0;
+    color: $dlm-accent;
+  }
+
+  .dlm-cover-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin-top: 1.6rem;
+    padding-top: 1.1rem;
+    position: relative;
+    color: $dlm-muted;
+    font-size: 0.95rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 56px;
+      height: 4px;
+      border-radius: 2px;
+      background: $dlm-sky;
+    }
+    .dlm-cover-authors { color: $dlm-ink; font-weight: 500; flex-basis: 100%; }
+  }
+
+  .dlm-cover-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+
+  .dlm-cite {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    color: $dlm-muted;
+    summary {
+      cursor: pointer;
+      color: $dlm-heading;
+      font-weight: 600;
+      width: fit-content;
+    }
+    // Rights statement: plain text above the highlighted citation
+    .dlm-cite-rights { margin: 0.6rem 0 0; max-width: none; }
+    .dlm-cite-body {
+      margin: 0.6rem 0 0;
+      padding: 0.8rem 1rem;
+      background: $dlm-surface;
+      border-left: 3px solid $dlm-sky;
+      border-radius: 0 8px 8px 0;
+      p { margin: 0; max-width: none; }
+    }
+    // APA hanging indent, as in the PDF
+    .dlm-cite-ref { padding-left: 0.5in; text-indent: -0.5in; }
+  }
+
+  .dlm-cover-logo {
+    position: absolute;
+    right: clamp(1.25rem, 3vw, 2rem);
+    bottom: clamp(1.25rem, 3vw, 1.75rem);
+    width: 168px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+  }
+}
+
+@if $dlm-is-dark {
+  #title-block-header.dlm-cover {
+    .dlm-cover-ornament-right { opacity: 0.55; }
+    .dlm-cover-ornament-left { opacity: 0.85; }
+  }
+}
+
+.dlm-btn {
+  border-radius: 999px;
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.2;
+}
+.dlm-btn-primary {
+  background: $dlm-navy;
+  border: 1px solid $dlm-navy;
+  color: #FFFFFF;
+  &:hover, &:focus { background: $dlm-blue; border-color: $dlm-blue; color: #FFFFFF; }
+}
+@if $dlm-is-dark {
+  .dlm-btn-primary { background: $dlm-blue; border-color: $dlm-blue; }
+  .dlm-btn-primary:hover { background: $dlm-bright; border-color: $dlm-bright; }
+}
+.dlm-btn-secondary {
+  background: transparent;
+  border: 1px solid $dlm-border;
+  color: $dlm-heading;
+  &:hover, &:focus { border-color: $dlm-accent; color: $dlm-accent; background: $dlm-surface; }
+}
+
+@media (max-width: 767.98px) {
+  #title-block-header.dlm-cover {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    .dlm-cover-ornament-right { width: 170px; height: 184px; opacity: 0.55; }
+    .dlm-cover-ornament-left { width: 160px; height: 107px; }
+    .dlm-cover-logo { width: 140px; height: 40px; }
+  }
+}
+
+// Print -----------------------------------------------------------------------
+@media print {
+  .dlm-cover-ornament, .dlm-cover-actions { display: none !important; }
+}

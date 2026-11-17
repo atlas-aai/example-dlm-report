@@ -1,0 +1,160 @@
+# Text Features {#sec-text-features}
+
+```{r}
+#| label: setup-text
+source("_common.R")
+```
+
+
+## Conditional text
+
+There are several ways to include text optionally.
+First, we can use in-line helpers such as `dlm_is_pdf()` or `dlm_is_html()`, which can be used to determine the type of output.
+For example, this is the `r ifelse(dlm_is_pdf(), "PDF", "website")` version of this report.
+
+We can also include or exclude entire paragraphs using the the `.content-visible` class with a div.
+
+::: {.content-visible when-format="html"}
+Read this report chapter by chapter in the browser, or download the complete PDF from the button above.
+:::
+
+::: {.content-visible when-format="typst"}
+The report is also available as a searchable website at <https://dynamiclearningmaps.org>.
+:::
+
+
+## Callouts {#sec-callouts}
+
+Callouts can be used to draw attention to some text.
+Create a callout with:
+
+````
+::: {.callout-note}
+## Callout title
+
+Here is the callout text.
+:::
+````
+
+::: {.callout-note}
+## Note callout
+
+Create a note callout using the `.callout-note` class.
+:::
+
+::: {.callout-tip}
+## Tip callout
+
+Create a tip callout using the `.callout-tip` class.
+:::
+
+::: {.callout-important}
+## Important callout
+
+Create an important callout using the `.callout-important` class.
+:::
+
+::: {.callout-warning}
+## Warning callout
+
+Create a warning callout using the `.callout-warning` class.
+:::
+
+::: {.callout-caution}
+## Caution callout
+
+Create a caution callout using the `.callout-caution` class.
+:::
+
+## Code
+
+Inline code renders as you would expect (e.g., `function_name()`).
+We can also include code chunks.
+
+```{r}
+#| label: test-code
+#| echo: true
+
+library(tidyverse)
+
+penguins |>
+  as_tibble() |>
+  filter(species == "Adelie")
+```
+
+## Headings
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.
+
+Etiam finibus ultrices lacinia. Integer feugiat purus porta, venenatis sapien sit amet, eleifend erat. Sed sit amet tincidunt justo, id pellentesque orci. Donec dignissim egestas velit, et molestie orci sagittis eget. Maecenas a placerat quam, eu pharetra orci. Suspendisse congue, orci sed vestibulum fringilla, augue libero feugiat nulla, in accumsan est eros sollicitudin augue. Phasellus sit amet metus sit amet ex blandit iaculis sit amet sed ex. Curabitur tellus tortor, blandit quis ante eget, finibus iaculis urna. Proin sed tincidunt turpis, id dignissim tortor. Quisque ac lacus pellentesque, imperdiet mauris eu, tincidunt est. Mauris facilisis, quam condimentum pharetra porta, diam orci sagittis orci, nec egestas tortor orci et magna. Nam et risus in tellus pulvinar sodales. Sed ligula tellus, consectetur in elit et, blandit condimentum urna. Donec gravida magna a arcu vehicula bibendum. Duis congue neque id eros pulvinar placerat.
+
+### Heading 3 {#sec-heading-3}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.
+
+#### Heading 4
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.
+
+#### Heading 4
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.
+
+### Heading 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ex ultrices, iaculis mi a, egestas orci. Pellentesque rhoncus volutpat arcu, in dignissim sem efficitur vel. Etiam ac lacus ut lorem iaculis porta. Pellentesque massa elit, viverra eget ipsum quis, laoreet mattis erat. Ut libero nibh, mattis ac dictum vitae, efficitur et nulla. Suspendisse volutpat consequat vulputate. Aenean hendrerit efficitur congue. Duis a ex ut nisl congue volutpat. Ut commodo, tellus vel mollis vestibulum, lorem nulla dignissim nisl, ultrices convallis odio augue non odio. Mauris dictum semper quam. Morbi volutpat viverra ipsum ac iaculis.
+
+## Cross references
+
+We can cross reference sections.
+For example, callouts are described in @sec-callouts.
+Or we can reference subheadings such as @sec-heading-3.
+Or we can reference another chapter.
+Figures are described in @sec-figures.
+
+We can also reference tables and figures like @tbl-example1 and @fig-example1.
+
+
+```{r}
+#| label: tbl-example1
+#| tbl-cap: An example table caption.
+
+set.seed(2015)
+tibble(
+  state = sample(state.name, size = 5),
+  n = sample(1000:100000, size = 5)
+) |>
+  gt() |>
+  gt_atlas()
+```
+
+```{r}
+#| label: fig-example1
+#| fig-cap: An example figure caption
+#| fig-alt: A scatterplot of penguins.
+
+ggplot(penguins, aes(x = flipper_len, y = bill_len)) +
+  geom_point(aes(color = species, shape = species))
+```
+
+
+## Citations
+
+We can include a normal reference [@measr].
+Or we can include in text, such as with @clark2016.
+We can also include an abbreviation, like for the loglinear cognitive diagnostic model [LCDM\; @henson2009].
+
+## Equations
+
+Equations can also be rendered, numbered, and references as shown in @eq-dcm.
+
+$$
+P(X_j = x_j) = \sum_{c=1}^C\nu_c \prod_{i=1}^I\pi_{ic}^{x_{ij}}(1-\pi_{ic})^{1 - x_{ij}}
+$$ {#eq-dcm}
+
+We can also render math inline.
+For example, the intercept of @eq-lcdm, $\lambda_{i,0}$, determines the probability of a correct response for a nonmaster, and the main effect $\lambda_{i,1}$ is the increase in log-odds associated with mastery.
+
+$$
+\pi_{ic} = P(X_{ic} = 1|\alpha_c) = \frac{\exp(\lambda_{i,0} + \lambda_{i,1}\alpha_c)}{1 + \exp(\lambda_{i,0} + \lambda_{i,1}\alpha_c)}
+$$ {#eq-lcdm}

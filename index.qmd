@@ -1,0 +1,14 @@
+# About This Report {.unnumbered}
+
+```{r}
+#| label: setup-index
+source("_common.R")
+```
+
+This is a report template for the Dynamic Learning Maps^&reg;^ (DLM^&reg;^) Alternate Assessment System.
+This is where we can provide a brief overview or purpose of the manual.
+If this is a technical report, this is where we would include the executive summary.
+
+## Acknowledgments {.unnumbered}
+
+Here we can include any acknowledgements (e.g., staff, advisory committees).
